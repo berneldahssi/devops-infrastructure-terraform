@@ -1,7 +1,7 @@
 variable "region" {
   description = "The AWS region to deploy resources"
   type        = string
-  default     = "eu-west-2"
+  default     = "us-east-2"
 }
 
 variable "ami_name_filter" {
@@ -67,7 +67,7 @@ variable "public_subnet_cidrs" {
 variable "availability_zones" {
   description = "The availability zones for the subnets"
   type        = list(string)
-  default     = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
+  default     = ["us-east-2a", "us-east-2b", "us-east-2c"]
 }
 
 variable "tags" {
@@ -75,7 +75,7 @@ variable "tags" {
   type        = map(string)
   default = {
     Environment = "dev"
-    Name        = "djtech"
+    Name        = "teamc"
   }
 }
 
@@ -100,7 +100,7 @@ variable "listener_port" {
 variable "bucket_name_prefix" {
   description = "Prefix for the S3 bucket name"
   type        = string
-  default     = "djtech"
+  default     = "teamc"
 }
 
 variable "versioning" {
@@ -118,7 +118,7 @@ variable "route53_zone_id" {
 variable "vpc_name" {
   description = "The name prefix for the VPC and related resources"
   type        = string
-  default     = "djtech-vpc"
+  default     = "teamc-vpc"
 }
 
 variable "associate_public_ip_address" {

@@ -29,12 +29,13 @@ module "vpc" {
 }
 
 
-module "acm_certificate" {
-  source          = "./modules/acm_certificate"
-  domain_name     = var.domain_name
-  route53_zone_id = var.route53_zone_id
-  tags            = var.tags
-}
+# module "acm_certificate" {
+#   source          = "./modules/acm_certificate"
+#   domain_name     = var.domain_name
+#   route53_zone_id = var.route53_zone_id
+#   tags            = var.tags
+# }
+
 
 module "security_group" {
   source         = "./modules/security_group"

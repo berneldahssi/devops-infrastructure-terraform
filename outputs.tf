@@ -63,10 +63,10 @@ output "repository_arn" {
   value       = module.ecr_repository.repository_arn
 }
 
-output "certificate_arn" {
-  description = "The ARN of the ACM certificate"
-  value       = module.acm_certificate.certificate_arn
-}
+# output "certificate_arn" {
+#   description = "The ARN of the ACM certificate"
+#   value       = module.acm_certificate.certificate_arn
+# }
 
 output "security_group_id" {
   value = module.security_group.sg_id
